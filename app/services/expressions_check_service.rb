@@ -1,3 +1,29 @@
+# ExpressionsCheckService class
+# to check bracket expressions
+
+# input parameters:
+#   (expressions: String)
+#    Valid symbols: "[", "]", "(", ")", "<", ">", "{", "}"
+#     single string (example "[]") or
+#     multiline separated by "\n" (example "[]\n[]")
+#   (detailed: Boolean)
+#     for short valid/invalid output (example false) or
+#     for detailed Hash output (example
+#       {expression: String, valid: Boolean, error: String}
+#     )
+
+# output parameters:
+#   true/false for short single expression or
+#   Hash for detailed single expression or
+#   Array of Booleans for short multiline expressions or
+#   Array of Hashes for detailed multiline expressions
+
+# Examples:
+#  ExpressionsCheckService.call('[]', false) #short single expression
+#  ExpressionsCheckService.call('[]') #detailed single expression
+#  ExpressionsCheckService.call("[]\n[]", false) #short multiline expressions
+#  ExpressionsCheckService.call("[]\n[]") #detailed multiline expressions
+
 class ExpressionsCheckService < ApplicationService
     def initialize(expressions, detailed = true)
       @expressions = expressions
