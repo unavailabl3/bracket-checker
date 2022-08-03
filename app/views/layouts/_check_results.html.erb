@@ -1,0 +1,29 @@
+<% if params[:expressions] %>
+    <% stats = get_stats %>
+    <p>
+        Expressions: <%= stats[:amount] %>,
+        valid: <%= stats[:valid] %>
+    </p>
+    <br>
+    <% check_data_array.each do |check_result| %>
+    <div class="check-result">
+        <table>
+            <tr>
+                <td>expression: </td>
+                <td><span class="result-expression"><%= check_result[:expression] %></span></td>
+            </tr>
+            <tr>
+                <td>valid: </td>
+                <td><span class="result-valid <%= check_result[:valid] == true ? 'valid' : 'invalid' %>"><%= check_result[:valid] %></span>
+                </td>
+            </tr>
+            <tr>
+                <td>error: </td>
+                <td><span class="result-valid"><%= check_result[:error] %></span></td>
+            </tr>
+        </table>
+    </div>
+    <% end %>
+<% else %>
+<div>Expressions parameter is missing</div>
+<% end %>

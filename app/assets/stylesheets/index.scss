@@ -1,0 +1,68 @@
+.container{
+    text-align: center;
+    margin-top: 100px;
+    .type-choice{
+        padding: 10px 0;
+        span{
+            border: 1px solid #80a0d2;
+            border-radius: 5px;
+            padding: 10px;
+            display: inline-block;
+            color: black;
+            font-weight: bold;
+            cursor: pointer;
+            &.selected{
+                background-color: #80a0d2;
+                color: white
+            }
+        }
+    }
+    input, textarea{
+        font-family: sans-serif;
+        outline: none;
+        min-width: 500px;
+        padding: 8px;
+        text-align: center;
+        border-radius: 5px;
+        font-size: 18px;
+        border: 2px solid #7585c7;
+        margin: 5px;
+        letter-spacing: 5px;
+    }
+    textarea{ display: none }
+    .check-button{
+        display: inline-block;
+        padding: 10px 30px;
+        background: #63ce8d;
+        border-radius: 5px;
+        margin-top: 20px;
+        color: white;
+        cursor: pointer;
+        &:hover{ background: #4b9d6b }
+    }
+
+    .check-results{
+        margin-top: 50px;
+        .check-result{
+            display: inline-block;
+            background: #e6e6e6;
+            padding: 10px 10px;
+            border-radius: 3px;
+            table{
+                border-collapse: separate;
+                border-spacing: 0 1em;
+                td{
+                    span{
+                        padding: 5px 20px;
+                        margin: 0 10px;
+                        background: white;
+                        border-radius: 5px;
+                        text-align: center;
+                        &.valid{ background: #bbe9c8 }
+                        &.invalid{ background: #ffe2e2 }
+                    }
+                }
+            }
+        }
+    }
+}
